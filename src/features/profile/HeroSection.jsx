@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../styles/sao-animations.css';
+import SaoButton from '../../components/common/SaoButton';
+import { FaDiscord, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 
 const HeroSection = () => {
   return (
@@ -19,7 +21,7 @@ const HeroSection = () => {
                 <img 
                     src="/src/assets/zekken-avatar.png" 
                     alt="Konno Yuuki - Absolute Sword" 
-                    className="max-h-[60vh] object-contain animate-levitate drop-shadow-2xl relative z-10"
+                    className="max-h-[40vh] md:max-h-[60vh] object-contain animate-levitate drop-shadow-2xl relative z-10"
                 />
             </div>
         </div>
@@ -36,6 +38,18 @@ const HeroSection = () => {
           <blockquote className="text-xl md:text-2xl font-body italic leading-relaxed text-gray-200 sao-glass-panel p-6 rounded-lg bg-sao-glass backdrop-blur-md">
             "I'd like my last pages of life to be the memories I made with you."
           </blockquote>
+
+          <div className="flex gap-6 mt-8 justify-center md:justify-start items-center">
+            <a href="https://discord.yuuki.me/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#5865F2] transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 text-3xl drop-shadow-lg" aria-label="Discord">
+              <FaDiscord />
+            </a>
+            <a href="https://t.me/YuukiPSz" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#0088cc] transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 text-3xl drop-shadow-lg" aria-label="Telegram">
+              <FaTelegramPlane />
+            </a>
+            <a href="https://www.youtube.com/c/MeYuuki" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#FF0000] transition-all duration-300 transform hover:-translate-y-1 hover:scale-110 text-3xl drop-shadow-lg" aria-label="YouTube">
+              <FaYoutube />
+            </a>
+          </div>
         </div>
 
       </div>
