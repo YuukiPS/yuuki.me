@@ -5,7 +5,7 @@ import { FaDiscord, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[70vh] flex flex-col items-center justify-center pt-20 overflow-hidden">
+    <div className="relative min-h-[70vh] flex flex-col items-center justify-center pt-20 pb-20 md:pb-0 overflow-hidden">
       
       {/* Background Graphic Accents */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-zekken-hair/30 rounded-full blur-[100px] pointer-events-none"></div>

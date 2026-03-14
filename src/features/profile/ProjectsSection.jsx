@@ -7,14 +7,34 @@ const ProjectsSection = () => {
     {
       name: 'YuukiPS',
       description: 'Private Server Project providing custom game experiences.',
-      url: 'https://ps-new.yuuki.me/',
+      links: [{ label: 'Access YuukiPS', url: 'https://ps-new.yuuki.me/' }],
       variant: 'primary',
     },
     {
       name: 'YuukiTV',
       description: 'Media tracking and streaming community platform.',
-      url: 'https://tv.yuuki.me/',
-      variant: 'secondary',
+      links: [{ label: 'Access YuukiTV', url: 'https://tv.yuuki.me/' }],
+      variant: 'primary',
+    },
+    {
+      name: 'File Manager',
+      description: 'Shared file storage and distribution server.',
+      links: [
+        { label: 'Main Server', url: 'https://file.yuuki.me' },
+        { label: 'Backup 1', url: 'https://file2.yuuki.me' },
+        { label: 'Backup 2', url: 'https://file3.yuuki.me' }
+      ],
+      variant: 'primary',
+    },
+    {
+      name: 'Git',
+      description: 'Source code repository for all our projects.',
+      links: [
+        { label: 'Main Server', url: 'http://git.yuuki.me' },
+        { label: 'GitLab', url: 'https://gitlab.com/YuukiPS' },
+        { label: 'GitHub', url: 'https://github.com/YuukiPS' }
+      ],
+      variant: 'primary',
     }
   ];
 
@@ -42,12 +62,14 @@ const ProjectsSection = () => {
               {project.description}
             </p>
             
-            <div className="mt-auto relative z-10">
-              <a href={project.url} target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
-                <SaoButton variant={project.variant} className="w-full flex justify-center items-center shadow-lg">
-                  Access {project.name}
-                </SaoButton>
-              </a>
+            <div className="mt-auto relative z-10 flex flex-col sm:flex-row gap-3 flex-wrap">
+              {project.links.map((link, linkIndex) => (
+                <a key={linkIndex} href={link.url} target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:flex-1">
+                  <SaoButton variant={project.variant} className="w-full flex justify-center items-center shadow-lg text-sm md:text-base">
+                    {link.label}
+                  </SaoButton>
+                </a>
+              ))}
             </div>
           </GlassPanel>
         ))}
