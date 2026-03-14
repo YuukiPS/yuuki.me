@@ -1,7 +1,6 @@
-import React from 'react';
 import '../../styles/sao-animations.css';
-import SaoButton from '../../components/common/SaoButton';
 import { FaDiscord, FaTelegramPlane, FaYoutube } from 'react-icons/fa';
+import zekkenAvatarUrl from '../../assets/zekken-avatar.png';
 
 const HeroSection = () => {
   return (
@@ -19,7 +18,7 @@ const HeroSection = () => {
                 {/* Simulated ALO "Wings" glow behind avatar */}
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[80%] bg-zekken-tunic/20 blur-3xl rounded-full"></div>
                 <img 
-                    src="/src/assets/zekken-avatar.png" 
+                    src={zekkenAvatarUrl} 
                     alt="Konno Yuuki - Absolute Sword" 
                     className="max-h-[40vh] md:max-h-[60vh] object-contain animate-levitate drop-shadow-2xl relative z-10"
                 />
